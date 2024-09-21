@@ -19,6 +19,29 @@
     margin-bottom: 40px;
 }
 
+.sub-text2 {
+    margin: 0;
+    text-align: center;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.points-row {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-bottom: 40px; */
+}
+
+.points {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
 .item-container {
     display: flex;
     justify-content: space-evenly;
@@ -28,21 +51,38 @@
 .card-div {
     background-color: whitesmoke;
     border-radius: 20px;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card-div:hover{
+
+.card-div:hover {
     outline: 2px solid black;
 }
 
-.item-img {
-    width: 160px;
+.card-img {
+    width: 60px;
     height: auto;
     margin-bottom: 20px;
+}
+
+.score-div {
+    width: auto;
+    height: 150px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.score-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .card-text {
