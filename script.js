@@ -81,7 +81,7 @@ if (getUserChoice() != "") {
 
 function playRound() {
 
-    if(userchoice === computerchoice){
+    if (userchoice === computerchoice) {
         scoreInfo.innerText = "It's a tie!"
         scoreMsg.innerText = userchoice + " ties with " + computerchoice
     }
@@ -102,6 +102,18 @@ function playRound() {
         scoreInfo.innerText = "You lost!"
         scoreMsg.innerText = userchoice + " beaten by " + computerchoice
     }
+
+    if (userScore == 5) {
+        alert("You Wins!")
+        location.reload();
+    } if (computerScore == 5) {
+        alert("Computer Wins!")
+        location.reload();
+    } if (userScore == 5 && computerScore == 5){
+        alert("Its a draw!")
+        location.reload();
+    }
+
 
     console.log('User choice', userchoice, 'Computer choice', computerchoice)
     console.log("User Score: ", userScore, "Comp Score: ", computerScore)
