@@ -9,6 +9,13 @@ let computerChooseIcon = document.getElementById('computerChooseIcon')
 let scoreInfo = document.getElementById('scoreInfo')
 let scoreMsg = document.getElementById('scoreMsg')
 
+let userchoice = ''
+let computerchoice = ''
+
+let userScore = 0
+let computerScore = 0
+
+
 const icons = [
     "./assets/facepunch.png",
     "./assets/raised_back_of_hand.png",
@@ -17,51 +24,72 @@ const icons = [
 
 
 // Button click
-rockBtn.addEventListener('click', () => getHumanChoice('ROCK'))
-paperBtn.addEventListener('click', () => getHumanChoice('PAPER'))
-scissorsBtn.addEventListener('click', () => getHumanChoice('SCISSORS'))
+rockBtn.addEventListener('click', () => getUserChoice('ROCK'))
+paperBtn.addEventListener('click', () => getUserChoice('PAPER'))
+scissorsBtn.addEventListener('click', () => getUserChoice('SCISSORS'))
 
 
-function getHumanChoice(playerSelection) {
+// Get user choice
+function getUserChoice(playerSelection) {
     if (playerSelection === 'ROCK') {
         console.log("User: Rock")
         userChooseIcon.src = icons[0]
+        userchoice = 'ROCK'
         getComputerChoice()
-        return 'ROCK'
-    } else if (playerSelection === 'PAPER') {
+    } if (playerSelection === 'PAPER') {
         console.log("User: Paper")
         userChooseIcon.src = icons[1]
+        userchoice = 'PAPER'
         getComputerChoice()
-        return 'PAPER'
-    } else if (playerSelection === 'SCISSORS') {
+    } if (playerSelection === 'SCISSORS') {
         console.log("User: Scissors")
         userChooseIcon.src = icons[2]
+        userchoice = 'SCISSORS'
         getComputerChoice()
-        return 'SCISSORS'
-    } else {
-        console.log("None Choose")
     }
-
-}
-
-function getComputerChoice() {
-    let randomNumber = Math.floor(Math.random() * 3)
-    switch (randomNumber) {
-        case 0:
-            console.log("Comp: Rock")
-            computerChooseIcon.src = icons[0]
-            return 'ROCK'
-        case 1:
-            console.log("Comp: Paper")
-            computerChooseIcon.src = icons[1]
-            return 'PAPER'
-        case 2:
-            console.log("Comp: Scissors")
-            computerChooseIcon.src = icons[2]
-            return 'SCISSORS'
-    }
-
 }
 
 
+// Check whether the user choice any, if yes comp will choose one
+if (getUserChoice() != "") {
+    function getComputerChoice() {
+        let randomNumber = Math.floor(Math.random() * 3)
+        switch (randomNumber) {
+            case 0:
+                console.log("Comp: Rock")
+                computerChooseIcon.src = icons[0]
+                computerchoice = 'ROCK'
+                break
+            case 1:
+                console.log("Comp: Paper")
+                computerChooseIcon.src = icons[1]
+                computerchoice = 'PAPER'
+                break
+            case 2:
+                console.log("Comp: Scissors")
+                computerChooseIcon.src = icons[2]
+                computerchoice = 'SCISSORS'
+                break
+        }
+        playRound()
+    }
+}
 
+
+function playRound() {
+
+    if (userchoice === 'ROCK' && computerchoice === 'SCISSORS' ||
+        userchoice === 'SCISSORS' && computerchoice === 'PAPER' ||
+        userchoice === 'PAPER' && computerchoice == 'ROCK') {
+        userScore++
+    }
+    if (computerchoice === 'ROCK' && userchoice === 'SCISSORS' ||
+        computerchoice === 'SCISSORS' && userchoice === 'PAPER' ||
+        computerchoice === 'PAPER' && userchoice == 'ROCK') {
+        computerScore++
+    }
+
+    console.log('User choice', userchoice, 'Computer choice', computerchoice)
+    console.log("User Score: ", userScore, "Comp Score: ", computerScore)
+
+}
