@@ -1,3 +1,7 @@
+.main-container{
+    height: 100vh;
+    background-color: #111720;
+}
 .main-head-text {
     margin: 0;
     font-family: "Press Start 2P", system-ui;
@@ -6,6 +10,8 @@
     font-size: 36px;
     text-align: center;
     margin: 40px 0px;
+    color: #fac650;
+    text-transform: uppercase;
 }
 
 .sub-text {
@@ -17,6 +23,8 @@
     font-size: 24px;
     letter-spacing: 2px;
     margin-bottom: 40px;
+    color: whitesmoke;
+    text-transform: capitalize;
 }
 
 .sub-text2 {
@@ -27,12 +35,13 @@
     font-style: normal;
     font-size: 16px;
     margin-bottom: 40px;
+    color: whitesmoke;
+    text-transform: capitalize;
 }
 
 .points-row {
     display: flex;
     justify-content: space-evenly;
-    /* margin-bottom: 40px; */
 }
 
 .points {
@@ -49,7 +58,7 @@
 }
 
 .card-div {
-    background-color: whitesmoke;
+    background-color: #393e46;
     border-radius: 20px;
     width: 200px;
     height: 200px;
@@ -60,7 +69,7 @@
 }
 
 .card-div:hover {
-    outline: 2px solid black;
+    outline: 2px solid whitesmoke;
 }
 
 .card-img {
@@ -70,6 +79,7 @@
 }
 
 .score-div {
+    background-color: #111720;
     width: auto;
     height: 150px;
     border: none;
@@ -91,4 +101,6 @@
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    color: whitesmoke;
+    text-transform: uppercase;
 }
