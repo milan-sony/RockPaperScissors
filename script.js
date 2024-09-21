@@ -81,17 +81,23 @@ if (getUserChoice() != "") {
 
 function playRound() {
 
+    if(userchoice === computerchoice){
+        scoreInfo.innerText = "It's a tie!"
+    }
+
     if (userchoice === 'ROCK' && computerchoice === 'SCISSORS' ||
         userchoice === 'SCISSORS' && computerchoice === 'PAPER' ||
         userchoice === 'PAPER' && computerchoice == 'ROCK') {
         userScore++
-        dispUserScore.innerText = "You: " + userScore
+        dispUserScore.innerText = "Your Point: " + userScore
+        scoreInfo.innerText = "You Won!"
     }
     if (computerchoice === 'ROCK' && userchoice === 'SCISSORS' ||
         computerchoice === 'SCISSORS' && userchoice === 'PAPER' ||
         computerchoice === 'PAPER' && userchoice == 'ROCK') {
         computerScore++
-        dispComputerScore.innerText = "Computer: " + computerScore
+        dispComputerScore.innerText = "Computer Point: " + computerScore
+        scoreInfo.innerText = "You lost!"
     }
 
     console.log('User choice', userchoice, 'Computer choice', computerchoice)
