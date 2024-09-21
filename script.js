@@ -83,6 +83,7 @@ function playRound() {
 
     if(userchoice === computerchoice){
         scoreInfo.innerText = "It's a tie!"
+        scoreMsg.innerText = userchoice + " ties with " + computerchoice
     }
 
     if (userchoice === 'ROCK' && computerchoice === 'SCISSORS' ||
@@ -91,6 +92,7 @@ function playRound() {
         userScore++
         dispUserScore.innerText = "Your Point: " + userScore
         scoreInfo.innerText = "You Won!"
+        scoreMsg.innerText = userchoice + " beats " + computerchoice
     }
     if (computerchoice === 'ROCK' && userchoice === 'SCISSORS' ||
         computerchoice === 'SCISSORS' && userchoice === 'PAPER' ||
@@ -98,6 +100,7 @@ function playRound() {
         computerScore++
         dispComputerScore.innerText = "Computer Point: " + computerScore
         scoreInfo.innerText = "You lost!"
+        scoreMsg.innerText = userchoice + " beaten by " + computerchoice
     }
 
     console.log('User choice', userchoice, 'Computer choice', computerchoice)
