@@ -70,6 +70,7 @@
 
 .card-div:hover {
     outline: 2px solid whitesmoke;
+    transition: 0.3s ease;
 }
 
 .card-img {
