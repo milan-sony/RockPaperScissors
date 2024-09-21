@@ -6,6 +6,9 @@ const scissorsBtn = document.getElementById('scissorsBtn')
 let userChooseIcon = document.getElementById('userChooseIcon')
 let computerChooseIcon = document.getElementById('computerChooseIcon')
 
+let dispUserScore = document.getElementById('dispUserScore')
+let dispComputerScore = document.getElementById('dispComputerScore')
+
 let scoreInfo = document.getElementById('scoreInfo')
 let scoreMsg = document.getElementById('scoreMsg')
 
@@ -82,11 +85,13 @@ function playRound() {
         userchoice === 'SCISSORS' && computerchoice === 'PAPER' ||
         userchoice === 'PAPER' && computerchoice == 'ROCK') {
         userScore++
+        dispUserScore.innerText = "You: " + userScore
     }
     if (computerchoice === 'ROCK' && userchoice === 'SCISSORS' ||
         computerchoice === 'SCISSORS' && userchoice === 'PAPER' ||
         computerchoice === 'PAPER' && userchoice == 'ROCK') {
         computerScore++
+        dispComputerScore.innerText = "Computer: " + computerScore
     }
 
     console.log('User choice', userchoice, 'Computer choice', computerchoice)
