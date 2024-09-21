@@ -23,31 +23,36 @@
 
     <div class="container-fluid main-container">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="main-head-text">Rock Paper Scissors</h1>
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-lg-12">
-                    <h3 class="sub-text">Choose Your Weapon</h3>
-                    <h3 class="sub-text2">First to score 5 points wins the game</h3>
+                <div class="col-lg-12 result">
+                    <h3 class="sub-text" id="scoreInfo">Choose Your Weapon</h3>
+                    <h3 class="sub-text2" id="scoreMsg">First to score 5 points wins the game</h3>
                 </div>
             </div>
 
             <div class="row">
+
                 <div class="col-lg-12">
+
                     <div class="item-container">
                         <div class="card score-div">
-                            <img src="./assets/grey_question.png" class="card-img-top score-img" alt="Rock Image">
+                            <img src="./assets/grey_question.png" class="card-img-top score-img" alt="User Choice" id="userChooseIcon">
                             <h5 class="card-title card-text">You: 0</h5>
                         </div>
 
                         <div class="card score-div">
-                            <img src="./assets/grey_question.png" class="card-img-top score-img" alt="Rock Image">
+                            <img src="./assets/grey_question.png" class="card-img-top score-img" alt="Rock Image" id="computerChooseIcon">
                             <h5 class="card-title card-text">Computer: 0</h5>
                         </div>
                     </div>
+
                 </div>
 
             </div>
@@ -55,17 +60,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="item-container">
-                        <div class="card card-div">
+                        <div class="card card-div" id="rockBtn">
                             <img src="./assets/facepunch.png" class="card-img-top card-img" alt="Rock Image">
                             <h5 class="card-title card-text">Rock</h5>
                         </div>
 
-                        <div class="card card-div">
+                        <div class="card card-div" id="paperBtn">
                             <img src="./assets/raised_back_of_hand.png" class="card-img-top card-img" alt="Rock Image">
                             <h5 class="card-title card-text">Paper</h5>
                         </div>
 
-                        <div class="card card-div">
+                        <div class="card card-div" id="scissorsBtn">
                             <img src="./assets/v.png" class="card-img-top card-img" alt="Rock Image">
                             <h5 class="card-title card-text">Scissors</h5>
                         </div>
