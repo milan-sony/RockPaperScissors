@@ -35,17 +35,14 @@ scissorsBtn.addEventListener('click', () => getUserChoice('SCISSORS'))
 // Get user choice
 function getUserChoice(playerSelection) {
     if (playerSelection === 'ROCK') {
-        console.log("User: Rock")
         userChooseIcon.src = icons[0]
         userchoice = 'ROCK'
         getComputerChoice()
     } if (playerSelection === 'PAPER') {
-        console.log("User: Paper")
         userChooseIcon.src = icons[1]
         userchoice = 'PAPER'
         getComputerChoice()
     } if (playerSelection === 'SCISSORS') {
-        console.log("User: Scissors")
         userChooseIcon.src = icons[2]
         userchoice = 'SCISSORS'
         getComputerChoice()
@@ -59,17 +56,14 @@ if (getUserChoice() != "") {
         let randomNumber = Math.floor(Math.random() * 3)
         switch (randomNumber) {
             case 0:
-                console.log("Comp: Rock")
                 computerChooseIcon.src = icons[0]
                 computerchoice = 'ROCK'
                 break
             case 1:
-                console.log("Comp: Paper")
                 computerChooseIcon.src = icons[1]
                 computerchoice = 'PAPER'
                 break
             case 2:
-                console.log("Comp: Scissors")
                 computerChooseIcon.src = icons[2]
                 computerchoice = 'SCISSORS'
                 break
@@ -113,9 +107,4 @@ function playRound() {
         alert("Its a draw!")
         location.reload();
     }
-
-
-    console.log('User choice', userchoice, 'Computer choice', computerchoice)
-    console.log("User Score: ", userScore, "Comp Score: ", computerScore)
-
 }
