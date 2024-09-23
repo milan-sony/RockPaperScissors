@@ -118,7 +118,8 @@
     }
 
     .score-img {
-        height: 60px;
+        width: 60px;
+        height: auto;
     }
 
     .card-text {
